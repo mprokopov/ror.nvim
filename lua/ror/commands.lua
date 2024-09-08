@@ -29,7 +29,7 @@ function M.list_commands()
   vim.ui.select(
     {
       "Generate model", "Generate controller", "Generate migration", "Generate mailer", "Generate system test", "Generate stimulus controller",
-      "Find models", "Find controllers", "Find mailers", "Find views", "Find model tests", "Find controller tests", "Find system tests", "Find migrations", "Find stimulus controllers",
+      "Find models", "Find services", "Find controllers", "Find mailers", "Find views", "Find model tests", "Find controller tests", "Find system tests", "Find migrations", "Find stimulus controllers",
       "Test current file", "Test current line", "Clear test result", "Toggle test terminal",
       "Show file coverage", "Hide file coverage",
       "Go to model", "Go to controller", "Go to test", "Go to view", "Vertical split model", "Vertical split controller", "Vertical split test",
@@ -55,6 +55,9 @@ function M.list_commands()
       elseif command == "Find models" then
         close_floating_window()
         require("ror.finders.model").find()
+      elseif command == "Find services" then
+        close_floating_window()
+        require("ror.finders.services").find()
       elseif command == "Find controllers" then
         close_floating_window()
         require("ror.finders.controller").find()
