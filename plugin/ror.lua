@@ -53,5 +53,5 @@ vim.api.nvim_create_user_command("RorCommands", function()
 end, {})
 
 vim.api.nvim_create_user_command("RorFinders", function()
-  require("ror.finders").list_finders()
+  require("ror.finders").select_finders()
 end, {})
