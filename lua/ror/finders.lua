@@ -8,6 +8,8 @@ function M.select_finders()
     function (finder)
       if finder == "Models" then
         require("ror.finders.model").find()
+      elseif finder == "Services" then
+        require("ror.finders.services").find()
       elseif finder == "Controllers" then
         require("ror.finders.controller").find()
       elseif finder == "Migrations" then
