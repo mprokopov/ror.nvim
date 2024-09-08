@@ -3,7 +3,7 @@ local M = {}
 
 function M.select_finders()
   vim.ui.select(
-    { "Models", "Controllers", "Migrations", "Views", "Model tests", "Controller tests", "System tests" },
+    { "Models", "Services", "Controllers", "Migrations", "Views", "Model tests", "Controller tests", "System tests" },
     { prompt = "What are you looking for?" },
     function (finder)
       if finder == "Models" then
